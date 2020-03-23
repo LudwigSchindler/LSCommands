@@ -1,0 +1,31 @@
+name: LSCommands
+version: 3.1.0.4
+author: LudwigSchindler
+api-version: 1.14
+main: de.ludwigschindler.lscommands.main.LSCommands
+
+commands:
+  lscommands:
+    description: The main command of the plugin
+    usage: /<command>
+    aliases: [lcommands, ls, lsc]
+  language:
+    description: Change/Output the current language
+    usage: /<command> [language]
+    aliases: [sprache, lang]
+  chatclear:
+    description: Clears the chat
+    usage: /<command>
+    aliases: [cc]
+  privatechatclear:
+    description: Clears the chat for only one person
+    usage: /<command> [player]
+    aliases: [pcc]
+  skull:
+    description: Gives the skull of a player
+    usage: /<command> [<player>]
+    aliases: [kopf, head]
+  broadcast:
+    description: Sends a message to every player on the server
+    usage: /<command> message
+    aliases: [bc]

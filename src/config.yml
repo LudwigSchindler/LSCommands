@@ -1,0 +1,90 @@
+# Everything in this config.yml is used globally in the plugin and serves for default configuration
+#
+#
+#   MESSAGES
+# The messages in this file are used when:
+#   there are no message files
+#   there is no message in the specific language of the player
+#
+#
+#   Placeholders:
+#
+# Placeholders were implemented to allow a fast and easy change of the 'color scheme' of the messages
+# But if you are aware of what you are doing you can repurpose them however you want
+#
+#   How they work:
+#
+# In every message sent by the plugin every placeholder is being replaced by its respective value
+#
+# Valid placeholders:
+#   #prefix#        | Replaced by the prefix under general.settings.prefix
+#
+#   #tcc#           | Replaced by the color under general.settings.text-chat-color (use this for normal text)
+#   #ecc#           | Replaced by the color under general.settings.error-chat-color (use this for text in error messages)
+#   #occ#           | Replaced by the color under general.settings.object-chat-color (use this to highlight objects/values like an item)
+#   #ncc#           | Replaced by the color under general.settings.number-chat-color (use this to highlight numbers like the flyspeed)
+#   #pcc#           | Replaced by the color under general.settings.player-chat-color (use this to highlight player names)
+#
+#   #1# #2# #3# ... | Replaced by whatever parameters the command has to offer (items, names, values of speed, amount, etc.)
+#                   | Just read the default text or documentation before changing anything to know which placeholders holds what
+#
+#                   | In the usages the #1# stands for the command the user executed
+#
+#   §a §i §3 §r     | The normal color codes do work as usual with the '§'
+#   &a &i &3 &r     | You can also use '&' since it is also being replaced by the plugin to enable colored writing in the chat
+#
+#
+general:
+  settings:
+    useDisplayNames: true
+    console-language: en_US
+    savePlayerDataInterval: 180
+    debugMode: true
+  language:
+    name: "English (default)"
+    aliases: ["default", "en", "english", "englisch", "config"]
+    autoPrefix: false
+    prefix: "&6[&4LS&aCommands&6]&3"
+    text-chat-color: "3"
+    error-chat-color: "c"
+    object-chat-color: "6"
+    number-chat-color: "d"
+    player-chat-color: "6"
+  messages:
+    noPermission: "#prefix# #ecc#Vous n'avez pas les permissions nécessaires pour effectuer cette action !"
+    commandNotActive: "#prefix# #ecc#This command is deactivated!"
+    contactAdmin: "#prefix# #ecc#Please contact an administrator!"
+    enterMessage: "#prefix# #ecc#Please enter a message!"
+    gui:
+      cancelClose: "#ecc#cancel/close"
+commands:
+  language:
+    settings:
+      active: true
+      useGUI: false
+    messages:
+      usage: "#prefix# /#commmand# [<language>]"
+      displayCurrentLanguage: "#prefix# #tcc#Current language: #occ##1##tcc#."
+      languageSet: "#prefix# #tcc#Changed language to #occ##1#"
+      languageNotSupported: "#prefix# #occ##1# #ecc#is not supported!"
+      languageIdentical: "#prefix# #ecc#Your current language is already #occ##1##ecc#!"
+  chatclear:
+    settings:
+      active: true
+      useGUI: false
+      numberOfEmtpyLinesSent: 100
+      clearConsole: false
+    messages:
+      usage: "#prefix# /#1#"
+      clearAll: "#prefix# #tcc#Chat was cleared by #pcc##1#"
+  broadcast:
+    settings:
+      active: true
+      useGUI: false
+      sendToConsole: false
+    messages:
+      usage: "#prefix# /#1# <message>"
+      broadcastMessage: "&6[&aBroadcast&6]&3 #1#"
+events:
+  join:
+    playerJoin: "#prefix# #pcc##1# #tcc#joined the game"
