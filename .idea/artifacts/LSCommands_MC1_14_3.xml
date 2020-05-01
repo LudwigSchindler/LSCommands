@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="LSCommands_MC1.14.3">
+    <output-path>$PROJECT_DIR$/../../../Server/Spigot_1.14.3/plugins</output-path>
+    <root id="archive" name="LSCommands_v3.1.0.4.jar">
+      <element id="module-output" name="LSCommands" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../APIs/Spigot/spigot-1.14.3.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
