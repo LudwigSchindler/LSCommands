@@ -106,7 +106,7 @@ public class LSPlayer extends CraftPlayer {
         //InitPlayerData
         // String playerLang = LSCommands.players.getString(this.getUniqueId() + ".language");
         //language = (playerLang != null) ? playerLang : getDefaultLanguage();
-        language = LSLanguage.getLanguage("default");
+        language = LSLanguage.getLanguageByAlias("default");
     }
 
     /**

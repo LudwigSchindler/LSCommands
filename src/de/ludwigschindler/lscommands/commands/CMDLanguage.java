@@ -1,7 +1,6 @@
 package de.ludwigschindler.lscommands.commands;
 
 import de.ludwigschindler.lscommands.main.LSPlayer;
-import de.ludwigschindler.lscommands.main.LSCommands;
 import de.ludwigschindler.lscommands.main.language.LSLanguage;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -30,7 +29,7 @@ public class CMDLanguage implements CommandExecutor {
                 if (args.length == 0) {
                     p.sendMsg("commands.language.displayCurrentLanguage", p.getLanguage().getName());
                 } else if (args.length == 1) {
-                    LSLanguage lang = LSLanguage.getLanguage(args[0]);
+                    LSLanguage lang = LSLanguage.getLanguageByAlias(args[0]);
                     if(lang != null){
                         if(p.getLanguage() != lang){
                         p.setLanguage(lang);
