@@ -7,8 +7,6 @@ import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.SkullMeta;
-import sun.reflect.CallerSensitive;
-import sun.reflect.Reflection;
 
 import java.util.ArrayList;
 
